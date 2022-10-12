@@ -172,7 +172,7 @@ public class Main {
     }
 
     static int result(String str) {
-
+        // выполняем соответствующее арифметическое действие в зависмости от знака
         int result = 0;
         switch (str) {
             case "+": {
