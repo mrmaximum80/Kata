@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.NavigableMap;
 import java.util.TreeMap;
 
+// конвертер из википедии
 class IntegerConvertor {
     public static String intToRoman(int number) {
         if (number >= 4000 || number <= 0)

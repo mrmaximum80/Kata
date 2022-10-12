@@ -1,8 +1,8 @@
 package Calculator;
 
 class Operand {
-    private int number;
-    private String numberSystem;
+    private int number;             // число от 1 до 10
+    private String numberSystem;    // система счисления "arabic" или "roman"
 
 
     public int getNumber() {
