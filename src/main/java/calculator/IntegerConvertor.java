@@ -1,4 +1,4 @@
-package Calculator;
+package calculator;
 
 import java.util.Collections;
 import java.util.NavigableMap;

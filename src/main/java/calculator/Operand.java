@@ -1,4 +1,4 @@
-package Calculator;
+package calculator;
 
 class Operand {
     private int number;             // число от 1 до 10
