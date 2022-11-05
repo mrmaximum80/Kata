@@ -39,7 +39,8 @@ public class Complex {
 
         @Override
         public int hashCode() {
-            return Objects.hash(re, im);
+            return (Double.hashCode(re) << 5) + Double.hashCode(im);
+
         }
     }
 }
