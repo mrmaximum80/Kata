@@ -23,16 +23,13 @@ public class GetSalesMap {
 
 
     public static Map<String, Long> getSalesMap(Reader reader) {
-        Map<String, Long> salesMap = new LinkedHashMap<>();
-        String key;
+        Map<String, Long> salesMap = new HashMap<>();
+        String key = "";
         Scanner scanner = new Scanner(reader);
         while (scanner.hasNext()) {
-            key = scanner.next();
-            if (salesMap.containsKey(key)) {
-                salesMap.put(key, salesMap.get(key) + scanner.nextLong());
-            } else {
-                salesMap.put(key, scanner.nextLong());
-            }
+            salesMap.put(key = scanner.next(), (salesMap.containsKey(key))
+                    ? (salesMap.get(key) + scanner.nextLong())
+                    : scanner.nextLong());
         }
         return salesMap;
     }

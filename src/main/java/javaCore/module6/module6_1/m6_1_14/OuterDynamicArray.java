@@ -54,10 +54,10 @@ public class OuterDynamicArray {
                 throw new ArrayIndexOutOfBoundsException();
             }
             if (size > 0 && index != size) {
-//                System.arraycopy(array, index + 1, array, index, size - index);
-                for (int i = index; i < size; i++) {
-                    array[i] = array[i + 1];
-                }
+                System.arraycopy(array, index + 1, array, index, size - index);
+//                for (int i = index; i < size; i++) {
+//                    array[i] = array[i + 1];
+//                }
             }
             array[size] = null;
             size--;

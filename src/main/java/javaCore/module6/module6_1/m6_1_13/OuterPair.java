@@ -7,8 +7,8 @@ public class OuterPair {
 
     public static class Pair<T, V> {
 
-        private T first;
-        private V second;
+        private final T first;
+        private final V second;
 
         private Pair(T t, V v) {
             first = t;
