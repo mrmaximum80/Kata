@@ -69,7 +69,7 @@ public class Runner {
         private Map<String, List<T>> mailBox = new HashMap<>() {
             @Override
             public List<T> get(Object key) {
-                return (super.get(key) == null) ? Collections.<T>emptyList() : super.get(key);
+                return getOrDefault(key, Collections.EMPTY_LIST);
             }
         };
 
@@ -79,13 +79,7 @@ public class Runner {
 
         @Override
         public void accept(Contentable mail) {
-            if (mailBox.containsKey(mail.getTo())) {
-                mailBox.get(mail.getTo()).add((T) mail.getContent());
-            } else {
-                List<T> content = new ArrayList<>();
-                content.add((T) mail.getContent());
-                mailBox.put(mail.getTo(), content);
-            }
+            mailBox.computeIfAbsent(mail.getTo(), x -> new ArrayList<T>()).add((T) mail.getContent());
         }
     }
 

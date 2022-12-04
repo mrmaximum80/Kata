@@ -11,7 +11,6 @@ public class InterStream {
     }
 
     public static IntStream pseudoRandomStream(int seed) {
-        IntStream ints = IntStream.iterate(seed, n -> (n * n) / 10 % 1000);
-        return ints;
+        return IntStream.iterate(seed, n -> (n * n) / 10 % 1000);
     }
 }

@@ -10,7 +10,6 @@ public class TernaryOperator {
             Function<? super T, ? extends U> ifTrue,
             Function<? super T, ? extends U> ifFalse) {
 
-        Function<T, U> result = t -> condition.test(t) ? ifTrue.apply(t) : ifFalse.apply(t);
-        return result;
+        return t -> condition.test(t) ? ifTrue.apply(t) : ifFalse.apply(t);
     }
 }
